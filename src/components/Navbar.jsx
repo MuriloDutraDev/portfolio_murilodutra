@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Menu, X } from 'lucide-react'
-import { AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence, m as motion } from 'framer-motion'
 
 const links = [['Sobre', 'sobre'], ['Serviços', 'servicos'], ['Projetos', 'projetos'], ['Contato', 'contato']]
 
