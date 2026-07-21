@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+body { @apply m-0 bg-canvas font-sans text-ink antialiased; }
+::selection { @apply bg-zinc-200 text-zinc-950; }
+
+.skip-link {
+  @apply fixed left-4 top-3 z-[100] -translate-y-20 rounded-lg bg-white px-4 py-2 text-sm font-semibold text-zinc-950 transition-transform focus:translate-y-0;
+}
+
+.hero-grid {
+  background-image: linear-gradient(rgba(255, 255, 255, .035) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .035) 1px, transparent 1px);
+  background-size: 54px 54px;
+  mask-image: linear-gradient(to bottom, black, transparent 85%);
+  animation: grid-drift 18s linear infinite;
+}
+
+@keyframes grid-drift {
+  from { background-position: 0 0; }
+  to { background-position: 54px 54px; }
+}
+
+.project-grid {
+  background-image: linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.contact-grid::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, .09) 1px, transparent 1px);
+  background-size: 22px 22px;
+  mask-image: linear-gradient(to bottom, black, transparent 75%);
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
+
+@layer components {
+  .container-site { @apply mx-auto w-full max-w-[1180px] px-5 sm:px-8 lg:px-10; }
+  .section-space { @apply py-24 sm:py-28 lg:py-36; }
+  .eyebrow { @apply mb-5 text-xs font-semibold uppercase tracking-[0.2em] text-brand; }
+  .section-title { @apply max-w-3xl text-3xl font-semibold tracking-[-0.04em] text-ink sm:text-4xl lg:text-5xl; }
+  .section-copy { @apply mt-5 max-w-2xl text-base leading-7 text-muted sm:text-lg sm:leading-8; }
+  .focus-ring { @apply outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-4 focus-visible:ring-offset-canvas; }
+}
