@@ -3,6 +3,7 @@
   "short_name": "Murilo Dutra",
   "description": "Portfólio de Murilo Dutra, desenvolvedor web em Canoas, RS.",
   "lang": "pt-BR",
+  "id": "/",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
