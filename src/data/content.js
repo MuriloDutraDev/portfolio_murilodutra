@@ -19,6 +19,19 @@ export const projects = [
     imageWidth: 864,
     imageHeight: 1821,
     tags: ['React', 'Framer Motion', 'Vite'],
+    status: 'Projeto de portfólio',
+  },
+  {
+    category: 'Landing page',
+    title: 'Brasa Burger',
+    subtitle: 'Hamburgueria artesanal',
+    description: 'Landing page conceitual para uma hamburgueria de Canoas, com direção de arte cinematográfica, cardápio filtrável e conversão direta pelo WhatsApp.',
+    image: '/images/projects/brasa-burger.webp',
+    imagePosition: 'center',
+    imageWidth: 1200,
+    imageHeight: 630,
+    tags: ['React', 'Tailwind CSS', 'Framer Motion'],
+    status: 'Projeto de portfólio',
   },
   {
     category: 'Site comercial',
@@ -33,6 +46,7 @@ export const projects = [
     imageHeight: 1600,
     tags: ['React', 'Tailwind CSS', 'Vite'],
     url: 'https://brownies-da-erica.vercel.app/',
+    status: 'Projeto real',
   },
 ]
 
